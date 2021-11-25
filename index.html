@@ -16,10 +16,15 @@
 
     var pw1 = document.getElementById("pswd1").value;
     var pw2 = document.getElementById("pswd2").value;
-    var name1 = document.getElementById("fname").value;
+    var name1 = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
 
     if (name1 == "") {
       document.getElementById("blankMsg").innerHTML = "Please Enter Name";
+      return false;
+    }
+    if (email == "") {
+      document.getElementById("emailmsg").innerHTML = "Please Enter Email";
       return false;
     }
 
@@ -53,9 +58,11 @@
 
       <label for="signup">Sign Up</label>
 
-      <input type="text" id="fname" value="" placeholder="Name">
+      <input type="text" id="name" value="" placeholder="Name">
       <span id="blankMsg" style="color:red" class="msg"> </span>
 
+      <input type="email" id="email" value="" placeholder="Email">
+      <span id="emailmsg" style="color:red" class="msg"> </span>
 
       <!-- <td> Create Password </td> -->
       <input type="password" id="pswd1" value="" placeholder="Password">
