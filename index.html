@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <title>Sign Up</title>
+</head>
+<script>
+
+  function validateForm() {
+
+    var pw1 = document.getElementById("pswd1").value;
+    var pw2 = document.getElementById("pswd2").value;
+    var name1 = document.getElementById("fname").value;
+
+    if (name1 == "") {
+      document.getElementById("blankMsg").innerHTML = "Please Enter Name";
+      return false;
+    }
+
+    if (!isNaN(name1)) {
+      document.getElementById("blankMsg").innerHTML = "Only Characters are allowed";
+      return false;
+    }
+
+    if (pw1 == "") {
+      document.getElementById("message1").innerHTML = "Please Enter Password";
+      return false;
+    }
+
+    if (pw2 == "") {
+      document.getElementById("message2").innerHTML = "Please Confirm Password";
+      return false;
+    }
+
+    if (pw1 != pw2) {
+      document.getElementById("message2").innerHTML = "Passwords are not same";
+      return false;
+    } else {
+      alert("SignUp Successful");
+    }
+  }
+</script>
+
+<body>
+  <div class="main">
+    <form onsubmit="return validateForm()">
+
+      <label for="signup">Sign Up</label>
+
+      <input type="text" id="fname" value="" placeholder="Name">
+      <span id="blankMsg" style="color:red" class="msg"> </span>
+
+
+      <!-- <td> Create Password </td> -->
+      <input type="password" id="pswd1" value="" placeholder="Password">
+      <span id="message1" style="color:red" class="msg"> </span>
+
+
+      <!-- <td> Confirm Password </td> -->
+      <input type="password" id="pswd2" value="" placeholder="Confirm Password">
+      <span id="message2" style="color:red" class="msg"> </span>
+
+      <input type="submit" value="Sign Up">
+  </div>
+</body>
+
+</html>
