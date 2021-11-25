@@ -33,7 +33,6 @@ label, td{
 	margin: 30px;
 	font-weight: bold;
 	cursor: pointer;
-	transition: .5s ease-in-out;
 }
 span{
     color: white;
@@ -66,7 +65,6 @@ input[type=submit]{
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	transition: .2s ease-in;
 	cursor: pointer;
 }
 .msg{
